@@ -59,7 +59,8 @@ resource "github_branch_protection" "default" {
   ]
 
   required_pull_request_reviews {
-    dismiss_stale_reviews = true
-    restrict_dismissals   = true
+    dismiss_stale_reviews           = true
+    restrict_dismissals             = false
+    required_approving_review_count = 0
   }
 }
