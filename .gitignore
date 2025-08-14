@@ -1,0 +1,9 @@
+archive
+*.log
+
+# Modules cached by Node.js (for linting, etc.)
+node_modules
+
+# Transient/state files used by OpenTofu
+**/.terraform/
+**/.terraform.tfstate*

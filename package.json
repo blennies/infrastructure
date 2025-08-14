@@ -1,0 +1,17 @@
+{
+  "name": "infrastructure",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Blennies <blennies.dev@gmail.com>",
+  "license": "MIT,Apache 2.0",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/types": "^19.8.1",
+    "commitlint": "^19.8.1"
+  }
+}
