@@ -20,7 +20,7 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm install
 
       - name: Validate commit messages
         run: pnpm commitlint --from=HEAD~1
