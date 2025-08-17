@@ -16,7 +16,7 @@ resource "github_repository" "default" {
   allow_squash_merge          = true
   allow_update_branch         = true
   squash_merge_commit_title   = "PR_TITLE"
-  squash_merge_commit_message = "PR_BODY"
+  squash_merge_commit_message = "COMMIT_MESSAGES"
   delete_branch_on_merge      = true
   web_commit_signoff_required = true
 
