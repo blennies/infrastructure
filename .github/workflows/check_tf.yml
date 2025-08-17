@@ -1,0 +1,40 @@
+name: Check infrastructure (.tf files)
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    paths:
+      - "**/*.tf"
+      - ".terraform.lock.hcl"
+      - ".github/workflows/check_tf.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  tf_checks:
+    name: Lint/format/validate .tf configuration files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install OpenTofu
+        uses: opentofu/setup-opentofu@v1
+
+      - name: OpenTofu fmt
+        id: fmt
+        run: tofu fmt --check --recursive
+
+      - name: OpenTofu Init
+        id: init
+        run: tofu init
+
+      - name: OpenTofu Validate
+        id: validate
+        run: tofu validate -no-color
+
+      - name: OpenTofu Plan
+        id: plan
+        run: tofu plan -no-color
+        continue-on-error: true
