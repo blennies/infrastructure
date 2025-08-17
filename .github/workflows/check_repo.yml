@@ -1,14 +1,17 @@
-name: Commit Validation
+name: Check repository
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types:
+      - opened
+      - synchronize
 
 permissions:
   contents: read
 
 jobs:
   commitlint:
+    name: Lint commit log
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +31,6 @@ jobs:
         if: github.event_name == 'push'
         run: pnpm commitlint --last --verbose
 
-      - name: Validate PR commits with commitlint
+      - name: Validate pull-request commits with commitlint
         if: github.event_name == 'pull_request'
         run: pnpm commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
