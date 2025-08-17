@@ -8,6 +8,7 @@ on:
     paths:
       - "**/*.tf"
       - ".terraform.lock.hcl"
+      - ".github/workflows/check_tf.yml"
 
 permissions:
   contents: read
