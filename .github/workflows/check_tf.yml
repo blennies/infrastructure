@@ -32,9 +32,9 @@ jobs:
 
       - name: OpenTofu Validate
         id: validate
-        run: tofu validate --no-color
+        run: tofu validate -no-color
 
       - name: OpenTofu Plan
         id: plan
-        run: tofu plan --no-color
+        run: tofu plan -no-color
         continue-on-error: true
