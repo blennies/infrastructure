@@ -1,13 +1,13 @@
 {
   "name": "infrastructure",
   "version": "0.0.0",
-  "description": "",
+  "description": "Infrastructure-as-code for \"Blennies\" projects",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Blennies <blennies.dev@gmail.com>",
-  "license": "MIT,Apache 2.0",
+  "license": "(MIT OR Apache-2.0)",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
     "@commitlint/config-conventional": "^19.8.1",
