@@ -13,5 +13,8 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/types": "^19.8.1",
     "commitlint": "^19.8.1"
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
   }
 }
