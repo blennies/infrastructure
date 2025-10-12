@@ -3,10 +3,18 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    groups:
+      updates:
+        patterns:
+          - "*"
     schedule:
       interval: "weekly"
 
   - package-ecosystem: "terraform"
     directory: "/"
+    groups:
+      updates:
+        patterns:
+          - "*"
     schedule:
       interval: "weekly"

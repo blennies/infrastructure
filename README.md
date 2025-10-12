@@ -4,9 +4,8 @@
 
 [![Conventional Commits badge](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
-Infrastructure-as-code repository that enables GitOps for the "Blennies"
-projects. Primarily, it automates the creation of GitHub repositories with
-consistent settings.
+Infrastructure-as-code repository for the "Blennies" projects. Primarily, it automates the
+creation of GitHub repositories with consistent settings.
 
 Uses HCL configuration files. Designed for use with [OpenTofu](https://opentofu.org/).
 
@@ -14,9 +13,9 @@ Uses HCL configuration files. Designed for use with [OpenTofu](https://opentofu.
 
 Ensure the latest version of [OpenTofu](https://opentofu.org/) is installed.
 
-OpenTofu needs suitable access to this repository's origin on GitHub in order
-to function correctly. You can achieve this by authenticating an account with
-suitable permissions via the [GitHub CLI](https://cli.github.com/) tool.
+OpenTofu needs suitable access to this repository's origin on GitHub in order to function
+correctly. You can achieve this by authenticating an account with suitable permissions via the
+[GitHub CLI](https://cli.github.com/) tool.
 
 To prepare OpenTofu to manage the infrastructure:
 

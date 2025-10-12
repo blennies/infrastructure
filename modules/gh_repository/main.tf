@@ -121,4 +121,14 @@ resource "github_issue_labels" "default" {
     description = "This will not be worked on"
     name        = "wontfix"
   }
+  label {
+    color       = "0366d6"
+    description = "Pull requests that update a dependency file"
+    name        = "dependencies"
+  }
+  label {
+    color       = "168700"
+    description = "Pull requests that update javascript code"
+    name        = "javascript"
+  }
 }
