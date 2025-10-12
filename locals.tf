@@ -4,10 +4,7 @@ locals {
   gh_repositories = {
     infrastructure = {
       name        = "infrastructure"
-      description = "Infrastructure-as-code repository for gitops."
+      description = "Infrastructure-as-code repository for \"Blennies\" projects."
     }
-    # lexalot = {
-    #   name = "lexalot"
-    # }
   }
 }
