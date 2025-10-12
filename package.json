@@ -9,9 +9,9 @@
   "author": "Blennies <blennies.dev@gmail.com>",
   "license": "(MIT OR Apache-2.0)",
   "engines": {
-    "node": ">=20.11",
-    "pnpm": ">=10"
+    "node": ">=20.11"
   },
+  "packageManager": "pnpm@10.18.2",
   "devDependencies": {
     "@commitlint/config-conventional": "20.0.0",
     "@commitlint/types": "20.0.0",
