@@ -6,5 +6,9 @@ locals {
       name        = "infrastructure"
       description = "Infrastructure-as-code repository for \"Blennies\" projects."
     }
+    unbikit = {
+      name        = "unbikit"
+      description = "Decoder for .bik format video/audio files."
+    }
   }
 }
