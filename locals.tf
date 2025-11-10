@@ -8,7 +8,7 @@ locals {
     }
     unbikit = {
       name        = "unbikit"
-      description = "Decoder for .bik format video/audio files."
+      description = "Decoder for .bik video files that can be used to play or transcode videos."
     }
   }
 }
