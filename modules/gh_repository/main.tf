@@ -131,4 +131,9 @@ resource "github_issue_labels" "default" {
     description = "Pull requests that update javascript code"
     name        = "javascript"
   }
+  label {
+    color       = "000000"
+    description = "Pull requests that update GitHub Actions code"
+    name        = "github_actions"
+  }
 }
