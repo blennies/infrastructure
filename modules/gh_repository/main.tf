@@ -26,6 +26,13 @@ resource "github_repository" "default" {
   vulnerability_alerts                    = true
   ignore_vulnerability_alerts_during_read = true
 
+  dynamic "pages" {
+    for_each = var.enable_gh_pages ? { value = { build_type = "workflow" } } : {}
+    content {
+      build_type = pages.value["build_type"]
+    }
+  }
+
   security_and_analysis {
     secret_scanning {
       status = "enabled"
@@ -135,5 +142,15 @@ resource "github_issue_labels" "default" {
     color       = "000000"
     description = "Pull requests that update GitHub Actions code"
     name        = "github_actions"
+  }
+  label {
+    color       = "ededed"
+    description = "CI-created pull request for generating the next release"
+    name        = "autorelease: pending"
+  }
+  label {
+    color       = "ededed"
+    description = "CI-created pull request that has resulted in a release being made"
+    name        = "autorelease: tagged"
   }
 }

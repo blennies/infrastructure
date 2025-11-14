@@ -5,4 +5,6 @@ module "gh_repository" {
   name        = each.value.name
   description = lookup(each.value, "description", null)
   topics      = lookup(each.value, "topics", null)
+
+  enable_gh_pages = lookup(each.value, "enable_gh_pages", false)
 }

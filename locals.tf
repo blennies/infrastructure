@@ -7,8 +7,9 @@ locals {
       description = "Infrastructure-as-code repository for \"Blennies\" projects."
     }
     unbikit = {
-      name        = "unbikit"
-      description = "Decoder for .bik video files that can be used to play or transcode videos."
+      name            = "unbikit"
+      description     = "Decoder for .bik video files that can be used to play or transcode videos."
+      enable_gh_pages = true
     }
   }
 }
