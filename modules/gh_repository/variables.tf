@@ -10,6 +10,12 @@ variable "description" {
   default     = null
 }
 
+variable "enable_gh_pages" {
+  type        = bool
+  description = "Whether to enable the creation of a GitHub Pages website for this repository."
+  default     = false
+}
+
 variable "topics" {
   type        = set(string)
   description = "Set of topics that apply to the repository."
