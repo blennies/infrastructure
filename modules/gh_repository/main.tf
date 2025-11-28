@@ -58,10 +58,15 @@ resource "github_branch_default" "default" {
 resource "github_branch_protection" "default" {
   repository_id = github_repository.default.node_id
 
-  pattern                = "main"
-  enforce_admins         = true
-  require_signed_commits = true
-  allows_deletions       = false
+  allows_deletions        = false
+  enforce_admins          = true
+  pattern                 = "main"
+  required_linear_history = true
+  require_signed_commits  = true
+  required_status_checks {
+    contexts = var.required_pr_ci_job_successes
+    strict   = true
+  }
 
   allows_force_pushes = false
   force_push_bypassers = [
