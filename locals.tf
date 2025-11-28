@@ -8,7 +8,8 @@ locals {
     }
     unbikit = {
       name            = "unbikit"
-      description     = "Decoder for .bik video files that can be used to play or transcode videos."
+      description     = "Decoder for .bik (Bink) video files that can be used to play or transcode videos."
+      homepage_url    = "https://blennies.github.io/unbikit/"
       enable_gh_pages = true
     }
   }

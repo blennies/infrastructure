@@ -1,8 +1,9 @@
 # Ensure the repository exists with the standard settings
 resource "github_repository" "default" {
-  name        = var.name
-  description = coalesce(var.description, "Repository for ${var.name}")
-  topics      = var.topics
+  name         = var.name
+  description  = coalesce(var.description, "Repository for ${var.name}")
+  homepage_url = var.homepage_url
+  topics       = var.topics
 
   visibility = "public"
 
