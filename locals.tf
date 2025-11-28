@@ -5,7 +5,7 @@ locals {
     infrastructure = {
       name                         = "infrastructure"
       description                  = "Infrastructure-as-code repository for \"Blennies\" projects."
-      required_pr_ci_job_successes = ["check-tf", "lint-commit-log"]
+      required_pr_ci_job_successes = ["Lint commit log", "Lint/format/validate .tf configuration files"]
     }
     unbikit = {
       name                         = "unbikit"
