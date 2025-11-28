@@ -8,4 +8,6 @@ module "gh_repository" {
   topics       = lookup(each.value, "topics", null)
 
   enable_gh_pages = lookup(each.value, "enable_gh_pages", false)
+
+  required_pr_ci_job_successes = lookup(each.value, "required_pr_ci_job_successes", [])
 }
