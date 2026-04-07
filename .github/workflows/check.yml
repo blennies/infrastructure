@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
       - name: Use Node.js
         uses: actions/setup-node@v6
         with:
@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Install OpenTofu
-        uses: opentofu/setup-opentofu@v1
+        uses: opentofu/setup-opentofu@v2
 
       - name: OpenTofu fmt
         id: fmt
