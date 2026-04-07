@@ -24,8 +24,7 @@ resource "github_repository" "default" {
   auto_init          = true
   archive_on_destroy = false
 
-  vulnerability_alerts                    = true
-  ignore_vulnerability_alerts_during_read = true
+  vulnerability_alerts = true
 
   dynamic "pages" {
     for_each = var.enable_gh_pages ? { value = { build_type = "workflow" } } : {}
